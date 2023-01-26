@@ -16,8 +16,17 @@ const NewTask = (props) => {
 
   return (
     <div className="add-task-form">
-      <input className='add-input' type="text" value={content} onChange={handleContentChange} placeholder='Wpisz nazwę zadania' />
-      <button className='add-button' onClick={() => { props.click(content); clearContent() }}>dodaj</button>
+      <input
+        className='add-input'
+        type="text" value={content}
+        onChange={handleContentChange} placeholder='Wpisz nazwę zadania'
+      />
+      <button
+        className='add-button'
+        onClick={() => { props.click(content); clearContent() }}
+      >
+        dodaj
+      </button>
     </div>
   );
 }

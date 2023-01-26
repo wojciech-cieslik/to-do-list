@@ -5,8 +5,12 @@ const Task = (props) => {
   return (
     <div className="task-content">
       <p className='content'>{task.content}</p>
-      <button className='task-delete-button'
-        onClick={() => click(task.id)}>X</button>
+      <button
+        className='task-delete-button'
+        onClick={() => click(task.id)}
+      >
+        X
+      </button>
     </div>
   );
 }

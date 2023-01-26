@@ -5,12 +5,14 @@ import NewTask from './NewTask';
 
 import './App.css';
 
-// let idCounter = 2;
-
 function App() {
 
+  const [tasks, setTasks] = useState([
+    { id: 1, content: 'Zrobić śniadanie' },
+    { id: 2, content: 'Zrobić obiad' },
+    { id: 3, content: 'Zrobić kolację' }
+  ]);
 
-  const [tasks, setTasks] = useState([{ id: 1, content: 'Zrobić śniadanie' }, { id: 2, content: 'Zrobić obiad' }, { id: 3, content: 'Zrobić kolację' }]);
   const [idCounter, setIdCounter] = useState(tasks.length + 1);
 
   const handleDeleteTasks = (id) => {
@@ -29,13 +31,14 @@ function App() {
     } else {
       alert("Nazwa musi zawierać przynajmniej 3 zanki!")
     }
-
   }
 
   return (
-    <div className="App">
+    <div className="app">
+      <h1 className='title'>To do list</h1>
       <NewTask click={handleAddNewTask} />
-      <TasksList tasks={tasks} click={handleDeleteTasks} />
+      <TasksList tasks={tasks}
+        click={handleDeleteTasks} />
     </div>
   );
 }

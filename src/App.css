@@ -3,8 +3,16 @@
   margin: 0;
 }
 
-.App {
+.app {
   text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.title {
+  margin-top: 20px;
+  background-color: orange;
+  font-size: 50px;
 }
 
 .task-content {
