@@ -10,7 +10,7 @@ import './App.css';
 function App() {
 
 
-  const [tasks, setTasks] = useState([{ id: 1, content: 'Zrobić śniadanie' }, { id: 2, content: 'Zrobić śniadanie2' }, { id: 3, content: 'Zrobić śniadanie3' }]);
+  const [tasks, setTasks] = useState([{ id: 1, content: 'Zrobić śniadanie' }, { id: 2, content: 'Zrobić obiad' }, { id: 3, content: 'Zrobić kolację' }]);
   const [idCounter, setIdCounter] = useState(tasks.length + 1);
 
   const handleDeleteTasks = (id) => {

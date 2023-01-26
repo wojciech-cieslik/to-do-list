@@ -22,6 +22,7 @@
   background-color: black;
   color: white;
   cursor: pointer;
+  margin-right: 15px;
 }
 
 .add-input,
@@ -41,4 +42,8 @@
   text-transform: uppercase;
   border-left: none;
   cursor: pointer;
+}
+
+.content {
+  margin-left: 15px;
 }

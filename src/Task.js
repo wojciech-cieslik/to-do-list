@@ -4,7 +4,7 @@ const Task = (props) => {
   const { task, click } = props;
   return (
     <div className="task-content">
-      <p>{task.content}</p>
+      <p className='content'>{task.content}</p>
       <button className='task-delete-button'
         onClick={() => click(task.id)}>X</button>
     </div>
