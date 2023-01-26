@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../styles/Task.css'
+
 const Task = (props) => {
   const { task, click } = props;
   return (

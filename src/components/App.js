@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import TasksList from './TasksList';
 import NewTask from './NewTask';
 
-import './App.css';
+import '../styles/App.css';
 
 function App() {
 

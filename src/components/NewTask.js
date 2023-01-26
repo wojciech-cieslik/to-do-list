@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import '../styles/NewTask.css'
+
 const NewTask = (props) => {
 
   const [content, setContent] = useState('');

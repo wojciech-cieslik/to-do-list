@@ -1,0 +1,25 @@
+.task-content {
+  width: 80%;
+  min-height: 50px;
+  margin: 5px 10%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+  background-color: orange;
+  font-size: 20px;
+}
+
+.task-delete-button {
+  padding: 7px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.content {
+  margin-left: 15px;
+}
