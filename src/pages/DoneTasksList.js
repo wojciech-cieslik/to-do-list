@@ -17,7 +17,7 @@ const DoneTasksList = () => {
 
   return (
     <div className='list'>
-      <h2>Zadania wykonane</h2>
+      <h2>Zadania wykonane ({listOfDoneTasks.length})</h2>
       {listOfDoneTasks.length > 0
         ? <ul>{listOfDoneTasks}</ul>
         : <p>-Brak zadań-</p>}

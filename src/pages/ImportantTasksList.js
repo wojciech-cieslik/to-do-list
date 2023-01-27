@@ -9,17 +9,17 @@ const ImportantTaksList = () => {
 
   const { tasks } = useContext(AppContext);
 
-  let listOfTasks = tasks.filter(task => task.isDone === false && task.priority === true).reverse();
+  let listOfImportantTasks = tasks.filter(task => task.isDone === false && task.priority === true).reverse();
 
-  listOfTasks = listOfTasks.map(task => (
+  listOfImportantTasks = listOfImportantTasks.map(task => (
     <Task key={task.id} task={task} />
   ));
 
   return (
     <div className='list'>
-      <h2>Zadania Ważne</h2>
-      {listOfTasks.length > 0
-        ? <ul>{listOfTasks}</ul>
+      <h2>Zadania Ważne ({listOfImportantTasks.length})</h2>
+      {listOfImportantTasks.length > 0
+        ? <ul>{listOfImportantTasks}</ul>
         : <p>-Brak zadań-</p>}
     </div>
   );
