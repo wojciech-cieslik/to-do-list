@@ -26,6 +26,7 @@ const AppProvider = ({ children }) => {
         content: newContent,
       };
       setTasks(tasks.concat(newTask));
+      alert(`Dodałeś zadanie: ${newContent}`)
     } else {
       alert("Nazwa musi zawierać przynajmniej 3 zanki!")
     }

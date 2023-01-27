@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 
-import { AppContext } from './AppContext';
+import { AppContext } from '../layouts/AppContext';
 
 import '../styles/NewTask.css'
 
@@ -22,6 +22,7 @@ const NewTask = () => {
 
   return (
     <div className="add-task-form">
+      <h2>Dodaj nowe zadanie do wykonania:</h2>
       <input
         className='add-input'
         type="text" value={content}

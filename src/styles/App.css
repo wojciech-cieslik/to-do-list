@@ -1,12 +1,14 @@
 .app {
+  position: relative;
   width: 80%;
   margin: 0 auto;
+  min-height: 100vh;
   text-align: center;
+  background-color: #fae1b2;
 }
 
 .title {
-  margin-top: 20px;
-  background-color: #fdb125;
   font-size: 50px;
   text-transform: uppercase;
+  background-color: #fdb125;
 }

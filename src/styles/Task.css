@@ -21,12 +21,12 @@
 }
 
 .task-is-done-button {
-  background-color: #000;
-  margin-right: 5px;
   height: 30px;
-  color: #fff;
+  margin-right: 5px;
   padding: 0 7px;
+  color: #fff;
   border-radius: 15px;
+  background-color: #000;
   transition: .2s;
 }
 

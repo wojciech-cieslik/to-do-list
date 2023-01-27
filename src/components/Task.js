@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
 
-import { AppContext } from './AppContext';
+import { AppContext } from '../layouts/AppContext';
 
 import '../styles/Task.css'
 
-const Task = (props) => {
+const Task = ({ task }) => {
 
-  const { handleSetIsDone } = useContext(AppContext);
-  const { task, click } = props;
+  const { handleSetIsDone, handleDeleteTasks } = useContext(AppContext);
+
   return (
     <div className="task-content">
       <p className='content'>{task.content}</p>
@@ -20,7 +20,7 @@ const Task = (props) => {
         </button>}
         <button
           className='task-delete-button'
-          onClick={() => click(task.id)}
+          onClick={() => handleDeleteTasks(task.id)}
         >
           X
         </button>
