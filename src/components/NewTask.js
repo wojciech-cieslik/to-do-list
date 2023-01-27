@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+
+import { AppContext } from './AppContext';
 
 import '../styles/NewTask.css'
 
-const NewTask = (props) => {
+const NewTask = () => {
+
+  const { handleAddNewTask } = useContext(AppContext);
 
   const [content, setContent] = useState('');
 
@@ -25,7 +29,7 @@ const NewTask = (props) => {
       />
       <button
         className='add-button'
-        onClick={() => { props.click(content); clearContent() }}
+        onClick={() => { handleAddNewTask(); clearContent() }}
       >
         dodaj
       </button>
