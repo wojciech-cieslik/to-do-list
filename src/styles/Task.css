@@ -13,7 +13,21 @@
 }
 
 .task-content:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+}
+
+.content {
+  margin-left: 15px;
+}
+
+.task-is-done-button {
+  background-color: #000;
+  margin-right: 5px;
+  height: 30px;
+  color: #fff;
+  padding: 0 7px;
+  border-radius: 15px;
+  transition: .2s;
 }
 
 .task-delete-button {
@@ -27,11 +41,7 @@
   transition: .2s;
 }
 
-.task-delete-button:hover {
-  transform: scale(1.1);
-  transform: rotate(180deg);
-}
-
-.content {
-  margin-left: 15px;
+.task-delete-button:hover,
+.task-is-done-button:hover {
+  transform: scale(1.07);
 }

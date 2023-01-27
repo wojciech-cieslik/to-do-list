@@ -5,9 +5,9 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
 
   const [tasks, setTasks] = useState([
-    { id: 1, content: 'Zrobić śniadanie' },
-    { id: 2, content: 'Zrobić obiad' },
-    { id: 3, content: 'Zrobić kolację' }
+    { id: 1, isDone: false, content: 'Zrobić śniadanie' },
+    { id: 2, isDone: false, content: 'Zrobić obiad' },
+    { id: 3, isDone: false, content: 'Zrobić kolację' }
   ]);
 
   const [idCounter, setIdCounter] = useState(tasks.length + 1);
@@ -21,6 +21,7 @@ const AppProvider = ({ children }) => {
     if (newContent.length > 2) {
       setIdCounter(count => count + 1);
       const newTask = {
+        isDone: false,
         id: idCounter,
         content: newContent,
       };
@@ -30,8 +31,18 @@ const AppProvider = ({ children }) => {
     }
   }
 
+  const handleSetIsDone = (id) => {
+    const temporaryTasks = tasks.map(task => {
+      if (task.id === id) {
+        task.isDone = true;
+      }
+      return task;
+    })
+    setTasks(temporaryTasks);
+  }
+
   return (
-    <AppContext.Provider value={{ tasks, handleAddNewTask, handleDeleteTasks }}>
+    <AppContext.Provider value={{ tasks, handleAddNewTask, handleDeleteTasks, handleSetIsDone }}>
       {children}
     </AppContext.Provider>);
 }

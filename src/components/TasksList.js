@@ -7,13 +7,29 @@ import Task from './Task';
 const TasksList = () => {
 
   const { handleDeleteTasks, tasks } = useContext(AppContext);
-  const listOfTasks = tasks.map(task => (
+
+  let listOfDoneTasks = tasks.filter(task => task.isDone === true);
+  listOfDoneTasks = listOfDoneTasks.map(task => (
     <Task key={task.id} task={task} click={handleDeleteTasks} />
   ));
+
+  let listOfTasks = tasks.filter(task => task.isDone === false);
+  listOfTasks = listOfTasks.map(task => (
+    <Task key={task.id} task={task} click={handleDeleteTasks} />
+  ));
+
   return (
-    <ul>
-      {listOfTasks}
-    </ul>
+    <div>
+      <h2>Zadania do wykonania</h2>
+      {listOfTasks.length > 0
+        ? <ul>{listOfTasks}</ul>
+        : <p>-Brak zadań-</p>}
+      <h2>Zadania wykonane</h2>
+      {listOfDoneTasks.length > 0
+        ? <ul>{listOfDoneTasks}</ul>
+        : <p>-Brak zadań-</p>}
+    </div>
+
   );
 }
 
