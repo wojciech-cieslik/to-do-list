@@ -2,17 +2,23 @@
 .add-button {
   margin: 30px 0;
   padding: 10px;
-  border: 3px solid orange;
+  border: 3px solid #fdb125;
   background-color: #fff;
   font-size: 20px;
 }
 
 .add-input:focus {
-  border: 3px solid orange;
+  background-color: #fdb125;
+  outline: none;
+  color: #000;
 }
 
 .add-button {
   text-transform: uppercase;
   border-left: none;
   cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #fdb125;
 }

@@ -29,7 +29,7 @@ const NewTask = () => {
       />
       <button
         className='add-button'
-        onClick={() => { handleAddNewTask(); clearContent() }}
+        onClick={() => { handleAddNewTask(content); clearContent() }}
       >
         dodaj
       </button>
