@@ -45,3 +45,8 @@
 .task-is-done-button:hover {
   transform: scale(1.07);
 }
+
+.priority-mess {
+  color: #f00;
+  margin-left: 10px;
+}

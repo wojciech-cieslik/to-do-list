@@ -10,7 +10,7 @@ const Task = ({ task }) => {
 
   return (
     <div className="task-content">
-      <p className='content'>{task.content}</p>
+      <p className='content'>{task.content}  {task.priority && <strong className='priority-mess'>Ważne!</strong>}</p>
       <div>
         {task.isDone || <button
           className='task-is-done-button'

@@ -5,9 +5,9 @@ export const AppContext = createContext();
 const AppProvider = ({ children }) => {
 
   const [tasks, setTasks] = useState([
-    { id: 1, isDone: false, content: 'Zrobić śniadanie' },
-    { id: 2, isDone: false, content: 'Zrobić obiad' },
-    { id: 3, isDone: false, content: 'Zrobić kolację' }
+    { id: 1, isDone: false, priority: false, content: 'Zrobić śniadanie' },
+    { id: 2, isDone: false, priority: false, content: 'Zrobić obiad' },
+    { id: 3, isDone: false, priority: false, content: 'Zrobić kolację' }
   ]);
 
   const [idCounter, setIdCounter] = useState(tasks.length + 1);
@@ -17,16 +17,17 @@ const AppProvider = ({ children }) => {
     setTasks(newTasks);
   }
 
-  const handleAddNewTask = (newContent) => {
+  const handleAddNewTask = (newContent, priority) => {
     if (newContent.length > 2) {
       setIdCounter(count => count + 1);
       const newTask = {
         isDone: false,
+        priority,
         id: idCounter,
         content: newContent,
       };
       setTasks(tasks.concat(newTask));
-      alert(`Dodałeś zadanie: ${newContent}`)
+      alert(`Dodałeś ${priority ? 'priorytetowe' : ''} zadanie: ${newContent}`)
     } else {
       alert("Nazwa musi zawierać przynajmniej 3 zanki!")
     }

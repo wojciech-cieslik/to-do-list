@@ -14,6 +14,9 @@ const Navigation = () => {
           <NavLink className='nav-link' to='/tasks'>Do wykonania</NavLink>
         </li>
         <li>
+          <NavLink className='nav-link' to='/priority'>Priorytetowe</NavLink>
+        </li>
+        <li>
           <NavLink className='nav-link' to='/done'>Wykonane</NavLink>
         </li>
       </ul>
